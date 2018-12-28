@@ -1,0 +1,190 @@
+﻿@model IEnumerable<Routing.DAL.TrackServiceHistory>
+
+@{
+    ViewBag.Title = "ListServiceHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListServiceHistory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.intEquipmentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intComponentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dRepairDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intStopReason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.strDescriptionProblem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intMeterDue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intPmChecklist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intSMCSJob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.strSMCSJob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intSMCSComponentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.strSMCSComponentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intModifierId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intQuantityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intJobReasonId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intlLaborHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.repair_waiting_on)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.strDescriptiontFindings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.old_job_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intRegNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intSegment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intCountSegment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intLocationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intNumberAlong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intEvalutionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.floatMtbsAfterPm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intMtbsAfterPmServiceId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.intEquipmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intComponentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dRepairDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intStopReason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.strDescriptionProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intMeterDue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intPmChecklist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intSMCSJob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.strSMCSJob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intSMCSComponentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.strSMCSComponentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intModifierId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intQuantityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intJobReasonId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intlLaborHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.repair_waiting_on)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.strDescriptiontFindings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.old_job_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intRegNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intSegment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intCountSegment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intLocationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intNumberAlong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intEvalutionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.floatMtbsAfterPm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intMtbsAfterPmServiceId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.intServiceHistoryId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.intServiceHistoryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.intServiceHistoryId })
+        </td>
+    </tr>
+}
+
+</table>

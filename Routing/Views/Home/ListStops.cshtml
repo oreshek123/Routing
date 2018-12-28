@@ -1,0 +1,202 @@
+﻿@model IEnumerable<Routing.DAL.newEquipment>
+
+@{
+    ViewBag.Title = "ListStops";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="col-md-12">
+        <h2>ListStops</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.intGarageRoom)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intManufacturerID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intModelID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.strManufYear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intSNPrefixID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.strSerialNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intEquipmentTypeID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intSMCSFamilyID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intSizeID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intMetered)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intLastMetered)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intTotalMetered)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intlimitDay)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intlimitWeek)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bitActive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bitPreservation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bitMeter)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bitKTG)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.isDelete)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intLocationId)
+                </th>
+              
+                <th>
+                    @Html.DisplayNameFor(model => model.floatCostTires)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intCostTiresCurrency)
+                </th>
+              
+                <th>
+                    @Html.DisplayNameFor(model => model.floatFullPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.intFullPriceCurrency)
+                </th>
+         
+                <th>
+                    @Html.DisplayNameFor(model => model.bitMethodAmortization)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intGarageRoom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intManufacturerID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intModelID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.strManufYear)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intSNPrefixID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.strSerialNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intEquipmentTypeID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intSMCSFamilyID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intSizeID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intMetered)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intLastMetered)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intTotalMetered)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intlimitDay)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intlimitWeek)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bitActive)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bitPreservation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bitMeter)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bitKTG)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.isDelete)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intLocationId)
+                    </td>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.floatCostTires)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intCostTiresCurrency)
+                    </td>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.floatFullPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intFullPriceCurrency)
+                    </td>
+                
+            
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bitMethodAmortization)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.intEquipmentID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.intEquipmentID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.intEquipmentID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
